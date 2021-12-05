@@ -30,10 +30,8 @@ public class BasicArmour extends Armour {
     }
 
     public String getRarityDescription() {
-		if(rarity == 0) return "Common";
-		if(rarity == 1) return "Uncommon";
-		if(rarity == 2) return "Rare";
-		return "Epic"; 
+		RarityGenerator rarity = new RarityGenerator();
+        return rarity.generateRarity(this.rarity);
 	}
 
     public int getModCount() {
