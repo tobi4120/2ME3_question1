@@ -8,8 +8,8 @@ public class BasicArmour extends Armour {
     }
 
     public void setGearSlot() {
-        GearFactory my_factory = new GearFactory();
-        this.slot = my_factory.makeGear();
+        GearGenerator my_generator = new GearGenerator();
+        this.slot = my_generator.makeGear();
     }
 
     public String getGearSlot() {
@@ -17,7 +17,7 @@ public class BasicArmour extends Armour {
     }
 
     public String getDescription() {
-        return getRarityDescription() + " " + this.slot + ":\n";
+        return this.getRarityDescription() + " " + this.slot + ":\n";
     }
 
     public void setRarity() {
@@ -28,6 +28,13 @@ public class BasicArmour extends Armour {
     public int getRarity() {
         return this.rarity;
     }
+
+    public String getRarityDescription() {
+		if(rarity == 0) return "Common";
+		if(rarity == 1) return "Uncommon";
+		if(rarity == 2) return "Rare";
+		return "Epic"; 
+	}
 
     public int getModCount() {
         return 0;

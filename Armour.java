@@ -4,13 +4,7 @@ public abstract class Armour {
 
     public Armour() {};
 
-    protected String getRarityDescription() {
-		if(rarity == 0) return "Common";
-		if(rarity == 1) return "Uncommon";
-		if(rarity == 2) return "Rare";
-		return "Epic"; 
-	}
-
+    public abstract String getRarityDescription();
     public abstract void setGearSlot();
     public abstract String getDescription();
     public abstract void setRarity();

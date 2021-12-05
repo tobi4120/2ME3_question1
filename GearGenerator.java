@@ -1,7 +1,7 @@
 import java.util.Random;
 
-public class GearFactory {
-    public GearFactory() {};
+public class GearGenerator {
+    public GearGenerator() {};
     
     public String makeGear() {
         Random random = new Random(); 

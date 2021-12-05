@@ -1,7 +1,7 @@
 import java.util.Random;
 
-public class AttributeFactory {
-    public AttributeFactory() {};
+public class AttributeGenerator {
+    public AttributeGenerator() {};
     
     public String makeAttribute() {
         Random random = new Random(); 
