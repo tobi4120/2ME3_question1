@@ -8,7 +8,7 @@ public class BasicArmour extends Armour {
     }
 
     public void setGearSlot() {
-        GearGenerator my_generator = new GearGenerator();
+        GearFactory my_generator = new ConcreteGearFactory();
         this.slot = my_generator.makeGear();
     }
 
@@ -21,8 +21,8 @@ public class BasicArmour extends Armour {
     }
 
     public void setRarity() {
-        Random random = new Random();
-        this.rarity = random.nextInt(4);
+        RarityFactory rarity = new ConcreteRarityFactory();
+        this.rarity = rarity.generateNum();
     }
 
     public int getRarity() {
@@ -30,7 +30,7 @@ public class BasicArmour extends Armour {
     }
 
     public String getRarityDescription() {
-		RarityGenerator rarity = new RarityGenerator();
+		RarityFactory rarity = new ConcreteRarityFactory();
         return rarity.generateRarity(this.rarity);
 	}
 

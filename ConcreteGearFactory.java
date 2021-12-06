@@ -1,7 +1,7 @@
 import java.util.Random;
 
-public class GearGenerator {
-    public GearGenerator() {};
+public class ConcreteGearFactory implements GearFactory {
+    public ConcreteGearFactory() {};
     
     public String makeGear() {
         Random random = new Random(); 
@@ -18,7 +18,7 @@ public class GearGenerator {
 		}
 		else if(gearSlot == 3) {
 			return "Boots";
-		}
+		} 
         return null;
     }
 }

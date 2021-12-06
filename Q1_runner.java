@@ -6,6 +6,8 @@ public class Q1_runner {
         my_armour = new Mod(my_armour);
         my_armour = new Mod(my_armour);
         my_armour = new Mod(my_armour); 
+        my_armour = new Mod(my_armour); 
+        my_armour = new Mod(my_armour); 
         
         System.out.println(my_armour.getDescription());
     }

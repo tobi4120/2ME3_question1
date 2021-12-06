@@ -11,7 +11,7 @@ public class Mod extends ArmourDecorator {
     }
 
     public String getDescription() {
-        AttributeGenerator myAttributeGenerator = new AttributeGenerator();
+        AttributeFactory myAttributeGenerator = new ConcreteAttributeFactory();
         String mod = myAttributeGenerator.makeAttribute();
 
         if (newArmour.getModCount() < newArmour.getRarity()) {
